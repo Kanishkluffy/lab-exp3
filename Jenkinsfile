@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Validate') {
             steps {
-                bat 'terraform fmt -check -recursive -diff'
+                bat 'terraform fmt -check -recursive'
                 bat 'terraform init -input=false'
                 bat 'terraform validate'
             }
