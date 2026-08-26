@@ -7,7 +7,7 @@ module "network" {
   private_az          = "ap-south-1b"
   admin_cidr          = var.admin_cidr
 }
- 
+
 module "compute" {
   source            = "./modules/compute"
   web_count         = var.web_count
