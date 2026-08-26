@@ -11,6 +11,7 @@ pipeline {
         AWS_DEFAULT_REGION    = 'ap-south-1'
         TF_IN_AUTOMATION      = 'true'
     }
+    triggers { pollSCM('H/5 * * * *') }
     stages {
         stage('Checkout') {
             steps { checkout scm }
